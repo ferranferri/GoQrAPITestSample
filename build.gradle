@@ -11,6 +11,8 @@ test{
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.json/json
+    testCompile group: 'org.json', name: 'json', version: '20171018'
     testCompile 'org.testng:testng:6.8.1'
 }
 
