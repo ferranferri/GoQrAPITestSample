@@ -26,37 +26,21 @@ public class RESTRequestHelper {
     }
 
 
-
-//    protected String makeRequestURIAndProcess(SCHEME scheme, METHOD method, String function, String command){
-//        try {
-//
-//            String request = scheme.getValue() + "://" + BASE_URL + function + "/?" + command;
-//            logger.fine("Url: " + request);
-//            URL url = new URL(request);
-//            return makeRequestURLAndGetImage(url, method);
-//        } catch (MalformedURLException e) {
-//            throw new RuntimeException("Malformed URL");
-//        }
-//
-//    }
-
     /**
      * Opens a connection, and process the response from URLDecoder
      * @param url The Url to call
-     * @param method
      * @return The response as String
      */
-   /* private String makeRequestURLAndGetImage(URL url, METHOD method){
+    protected BufferedImage makeRequestURLAndGetImage(URL url){
 
         try {
-            BufferedImage bi = ImageIO.read(url);
-            return bi.toString();
+            return ImageIO.read(url);
         } catch (IOException ioe) {
             throw new RuntimeException("Something went really bad!");
         }
 
     }
-*/
+
     protected String makeRequestURLAndProcess(URL url, String method) throws IOException {
 
         logger.fine("Request url: " + url.toString() );
